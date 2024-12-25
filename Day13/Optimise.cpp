@@ -6,22 +6,22 @@ using namespace std;
 
 int missingNumber(vector<int> &arr)
 {
-    sort(arr.begin(), arr.end());
-
-    int res = 1;
-
-    for(int i = 0; i<arr.size(); i++)
+    int n = arr.size();
+    for(int i = 0; i<n; i++)
     {
-        if(arr[i] == res)
+        while(arr[i] >=1 && arr[i]<=n && arr[i] != arr[arr[i]-1])
         {
-            res++;
-        }
-        else if(arr[i]> res)
-        {
-            break;
+            swap(arr[i], arr[arr[i] -1]);
         }
     }
-    return res;
+    for(int i = 1; i<=n; i++)
+    {
+        if(i != arr[i-1])
+        {
+            return i;
+        }
+    }
+    return n+1;
 
 }
 
@@ -44,6 +44,6 @@ int main()
 
 }
 /*
-Time Complexity = 0(n*log(n))
+Time Complexity = 0(n)
 Space Complexity = 0(1)
 */
