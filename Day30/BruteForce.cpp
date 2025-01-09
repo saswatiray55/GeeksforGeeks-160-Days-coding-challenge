@@ -34,3 +34,8 @@ int main()
     int ans = search(arr, n);
     cout << ans << endl;
 }
+
+/*
+Time Complexity = 0(n)
+Space Complexity = 0(1)
+*/
