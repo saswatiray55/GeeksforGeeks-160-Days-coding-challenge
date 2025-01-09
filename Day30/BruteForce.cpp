@@ -31,7 +31,7 @@ int main()
     int key;
     cin >> key;
 
-    int ans = search(arr, n);
+    int ans = search(arr, key);
     cout << ans << endl;
 }
 
