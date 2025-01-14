@@ -3,17 +3,23 @@ using namespace std;
 
 bool twoSum(vector<int>& arr, int target)
 {
-    int n = arr.size();
-    unordered_map<int, int> mpp;
-    for(int i = 0; i<n; i++)
+    sort(arr.begin(), arr.end());
+    int left = 0, right = arr.size()-1;
+    while(left < right)
     {
-        int num = arr[i];
-        int needNum = target - num;
-        if(mpp.find(needNum) != mpp.end())
+        int sum = arr[left]+ arr[right];
+        if(sum == target)
         {
             return true;
         }
-        mpp[num] = i;
+        else if(sum < target)
+        {
+            left++;
+        }
+        else
+        {
+            right--;
+        }
     }
     return false;
 
@@ -41,5 +47,5 @@ int main()
 }
 
 /*
-Time Complexity: O(n)
-Space Complexity: O(n)*/
+Time Complexity: O(n*log(n))
+Space Complexity: O(1)*/
