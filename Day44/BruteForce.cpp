@@ -44,4 +44,5 @@ int main()
 
 /*
 Time Complexity: O(n^3)
+space complexity: 0(n)
 */
