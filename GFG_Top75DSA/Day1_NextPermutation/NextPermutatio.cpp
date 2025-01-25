@@ -39,7 +39,7 @@ void nextPermutation(vector<int>& arr)
         reverse(arr.begin(), arr.end());
         return;
     }
-    for(int i = n-1; i> index; i++)
+    for(int i = n-1; i> index; i--)
     {
         if(arr[i] > arr[index])
         {
