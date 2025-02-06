@@ -1,0 +1,7 @@
+Merge two sorted linked lists
+Given the head of two sorted linked lists consisting of nodes respectively. The task is to merge both lists and return the head of the sorted merged list.
+
+Examples:
+
+Input: head1 = 5 -> 10 -> 15 -> 40, head2 = 2 -> 3 -> 20
+Output: 2 -> 3 -> 5 -> 10 -> 15 -> 20 -> 40
